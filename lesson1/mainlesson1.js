@@ -14,7 +14,6 @@ let k =  16;
 let l = true;
 let m = false;
 
-
 console.log(one)
 console.log(two)
 console.log(three)
@@ -32,24 +31,22 @@ console.log(m)
 let firstName = 'Tarasevich';
 let middleName = 'Sergey';
 let lastName = 'Petrovich';
-
 let person = `${firstName} ${middleName} ${lastName}`;
+
 console.log(person)
 
 
 let a = 100;
 let b = '100';
 let c = true;
+
 console.log(typeof (a))
 console.log(typeof (b))
 console.log(typeof (c))
 
+
 let name= prompt( 'Enter your name:' );
-console.log(name);
-
 let fatherland= prompt( 'Enter your fatherland:' );
-console.log(fatherland);
+let age= +prompt( 'Enter your age:' );
 
-let age= prompt( 'Enter your age:' );
-console.log(age);
-
+console.log(` ${name}  ${fatherland}  ${age}`);
