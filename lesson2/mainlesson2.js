@@ -117,32 +117,36 @@ console.log(a3);
 // (в першу, другу, третю или четверту частину години).
 
 let time = +prompt('Enter the number');
- if (time <= 15) {
+ if (time >= 0 && time<=15) {
      document.write('<div>one</div>')
      console.log('one');
-} else if (time <= 30) {
+} else if (time >= 15 && time < 30 ) {
      document.write('<div>two</div>')
     console.log('two')
- } else if (time <= 45) {
+ } else if (time >= 30 && time <45) {
      document.write('<div>three</div>')
      console.log('three')
- } else if (time <= 59) {
+ } else if (time >= 45 && time < 60) {
      document.write('<div>four</div>')
      console.log('four')
+ } else {
+     console.log('не правильное число')
  }
 
 // У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
 let day = +prompt('Enter the number');
-if (day <= 10) {
+if (day >= 1 && day <= 10) {
     document.write('<div>one</div>')
     console.log('one');
-} else if (day <= 20) {
+} else if (day > 10 && day <= 20) {
     document.write('<div>two</div>')
     console.log('two')
-} else if (day <= 31) {
+} else if (day > 20 && day <= 31) {
     document.write('<div>three</div>')
     console.log('three')
+} else{
+    console.log('не правильная дата')
 }
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 
@@ -184,18 +188,31 @@ switch ( number) {
         console.log('Sunday');
     break;
     default:
-        console.log('day');
+        console.log('error');
+}
+
+// Користувач вводить або має два числа.
+//     Потрібно знайти та вивести максимальне число з тих двох .
+//     Також потрібно врахувати коли введені рівні числа.
+let number1 = 15;
+let number2 = 146;
+if (number1 < number2) {
+    console.log ('второе больше', number2)
+} else if (number1 > number2) {
+    console.log('первое больше', number1)
+} else {
+    console.log('равные числа')
 }
 
 // - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //     за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
 
-let x1 = 'w';
-if (x1 === NaN || x1 === undefined || x1=== false || x1 === null || x1===0);{
+let x1 = '';
+if ( x1 === ''  || x1 === undefined || x1=== false || x1 === null || x1===0) {
 
-    x1 = 'default'
-    console.log(x1)
-}
+    x1 = 'default';}
+    console.log(x1);
+
 // з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер"
 
 let coursesAndDurationArray = [
@@ -207,22 +224,22 @@ let coursesAndDurationArray = [
     {title: 'Frontend', monthDuration: 4}
 ];
 console.log(coursesAndDurationArray);
-if (coursesAndDurationArray [0] ['monthDuration'] > 5) {
-    console.log('super');}
+if (coursesAndDurationArray [0].monthDuration > 5) {
+    console.log(coursesAndDurationArray[0].title,'super') }
 
-if (coursesAndDurationArray[1] ['monthDuration'] > 5) {
-    console.log('super');}
+if (coursesAndDurationArray[1].monthDuration > 5) {
+    console.log(coursesAndDurationArray[1].title, 'super') }
 
-if (coursesAndDurationArray[2] ['monthDuration'] > 5) {
-    console.log('super');}
+if (coursesAndDurationArray[2].monthDuration> 5) {
+    console.log(coursesAndDurationArray[2].title,'super') }
 
-if (coursesAndDurationArray[3] ['monthDuration']> 5) {
-    console.log('super');}
+if (coursesAndDurationArray[3].monthDuration> 5) {
+    console.log(coursesAndDurationArray[3].title,'super') }
 
-if (coursesAndDurationArray[4] ['monthDuration']> 5) {
-    console.log('super');}
+if (coursesAndDurationArray[4].monthDuration> 5) {
+    console.log(coursesAndDurationArray[4].title,'super') }
 
-if (coursesAndDurationArray[5] ['monthDuration']> 5) {
-    console.log('super');}
+if (coursesAndDurationArray[5].monthDuration> 5) {
+    console.log(coursesAndDurationArray[5].title,'super') }
 
 
