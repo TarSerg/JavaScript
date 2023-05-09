@@ -23,7 +23,7 @@ for (const user of users) {
 console.log('--------------');
 
 for (const user of users) {
-    if(user.status === false )
+    if(!user.status )
         console.log(user)
 }
 console.log('--------------');
@@ -42,7 +42,7 @@ for ( let i = 0; i < 10; i++){
    }
 document.write('--------------')
 for ( let i = 0; i < 10; i++){
-    document.write(`<div> number house ${i+1} </div>`)}
+    document.write(`<div> number house ${i+1} </div>`);}
 
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
@@ -67,20 +67,14 @@ while ( i<20){
 //     let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-for ( let i = 0; i === 0 ; i++){
-    const listOfItem = listOfItems[i];
-      document.write( `<ul>
-        <li><h1>html</h1></li>
-        <li><h1>css</h1></li>
-        <li><h1>javascript</h1></li>
-        <li><h1>mysql</h1></li>
-        <li><h1>mongodb</h1></li>
-        <li><h1>react</h1></li>
-        <li><h1>angular</h1></li>
-        <li><h1>node.js</h1></li>
-                         </ul>`);
+document.write(`<ul>`)
+for (const listOfItem of listOfItems) {
+    console.log(listOfItem);
+    document.write(`<li>${listOfItem}</li>`)
+}
+document.write(`</ul>`);
 
-  }
+
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
@@ -113,3 +107,11 @@ for ( let i = 0; i <products.length ; i++) {
         <img src="${product.image}" alt="" className="product-image">
     </div>`)
 }
+// for (const product of products) {
+//     document.write(`
+//        <div class="product-card">
+//           <h3 class="product-title">${product.title}. Price - ${product.price}</h3>
+//           <img src=${product.image} alt="" class="product-image" width="150px">
+//        </div>
+//     `)
+// }
