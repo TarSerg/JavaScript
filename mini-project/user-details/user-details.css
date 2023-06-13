@@ -1,0 +1,42 @@
+/* блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки,
+по центру.*/
+/*блоки з короткою іфною про post - в ряд по 5 .*/
+body {
+    background-color: lightgray;
+}
+
+.wrap {
+        margin-left: 20px;
+       font-size: 20px;
+  }
+
+.btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.wrap2 {
+    font-size: 23px;
+    line-height: 1.5;
+    columns: 2;
+    margin-top: 10px;
+}
+
+.btn {
+    height: 25px;
+    border-radius: 5px;
+    margin-left: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+h1 {
+    margin-left: 20px;
+}

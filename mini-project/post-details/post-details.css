@@ -1,0 +1,15 @@
+ /*блок з інфою про пост зверху. Коментарі - по 4 в ряд.*!*/
+body {
+    background-color: lightgray;
+    margin-left: 25px;
+}
+
+.wrap {
+    margin-left: 20px;
+      font-size: 23px;
+  }
+.wrap2 {
+    line-height: 2;
+    font-size: 23px;
+}
+
