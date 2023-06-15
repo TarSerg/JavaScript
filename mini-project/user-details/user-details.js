@@ -2,10 +2,10 @@
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
 let userId = new URL(location.href).searchParams.get('userId');
 
-fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+let us = fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then((response) => response.json())
     .then((user) => {
-        // console.log(user)
+        // console.log(user);
         let block = document.getElementsByClassName('wrap')[0];
         let ul = document.createElement('ul');
         recursiveBuild(user, ul);
@@ -42,27 +42,24 @@ let button = document.createElement('button');
 button.className = 'btn1';
 button.innerText = `post of current user`;
 div.appendChild(button);
-let clicked = false;
-button.onclick= () => {
-
+button.onclick = () => {
 
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
         .then((response) => response.json())
         .then((posts) => {
-            let ul =document.createElement('ul')
             for (const post of posts) {
                 // console.log(post);
                 let block = document.getElementsByClassName('wrap2')[0];
-                let li = document.createElement('li');
-                li.innerText = `${post.title}`;
-                ul.appendChild(li);
-                block.appendChild(ul);
+                let div = document.createElement('div');
+                div.className = 'div1';
+                div.innerHTML = `&#9679   ${post.title}`;
+                block.appendChild(div);
                 //     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
 //     котра має детальну інфу про поточний пост.
                 let button = document.createElement('button');
                 button.className = 'btn';
                 button.innerText = 'infPost';
-                li.appendChild(button);
+                div.appendChild(button);
                 button.onclick = () => {
                     location.href = `../post-details/post-details.html?id=${post.id}`;
                 }

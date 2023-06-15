@@ -9,7 +9,16 @@ body {
       font-size: 23px;
   }
 .wrap2 {
-    line-height: 2;
+
+    display: flex;
+    flex-wrap: wrap;
     font-size: 23px;
+    height: 35vh;
+    gap: 10px;
+}
+
+.div1{
+
+    width:calc(25% - 10px);
 }
 

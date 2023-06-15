@@ -1,7 +1,7 @@
 // В index.html
 // 1 отримати масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users
 
-let info = fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then(users => {
 
@@ -25,9 +25,7 @@ let info = fetch('https://jsonplaceholder.typicode.com/users')
             button.onclick = () => {
                 location.href = `../user-details/user-details.html?userId=${element.id}`;
             }
-
         }
-
     });
 
 

@@ -23,14 +23,18 @@ body {
 }
 
 .wrap2 {
-    font-size: 23px;
-    line-height: 1.5;
-    columns: 2;
-    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    height: 30vh;
+    gap: 10px;
+    margin: 20px;
 }
-
+.div1{
+    width:calc(20% - 10px);
+}
 .btn {
-    height: 25px;
+    height: 20px;
     border-radius: 5px;
     margin-left: 15px;
     font-size: 15px;
