@@ -47,9 +47,18 @@ button.onclick = () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
         .then((response) => response.json())
         .then((posts) => {
+
+            let block = document.getElementsByClassName('wrap2')[0];
+            //// 1 version
+            // if (block.innerHTML !== '') {
+            //     return; // Якщо вміст вже присутній, вихід з функції
+            // }
+            //// 2 version
+            // block.innerHTML = '';
+
             for (const post of posts) {
                 // console.log(post);
-                let block = document.getElementsByClassName('wrap2')[0];
+
                 let div = document.createElement('div');
                 div.className = 'div1';
                 div.innerHTML = `&#9679   ${post.title}`;
@@ -65,7 +74,7 @@ button.onclick = () => {
                 }
             }
         });
-
+button.disabled = true;
 }
 
 
